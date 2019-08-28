@@ -3,7 +3,15 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
+import './plugins';
+
 Vue.config.productionTip = false;
+
+declare module 'vue/types/vue' {
+  interface Vue {
+      $alert: any
+  }
+}
 
 new Vue({
   router,
